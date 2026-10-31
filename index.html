@@ -2,96 +2,520 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Himanshu Kumar Singh - Portfolio</title>
-  <meta name="description" content="Portfolio of Himanshu Kumar Singh — Production Support Specialist (Banking & E-commerce).">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Himanshu Kumar Singh | Java Developer & Software Engineer</title>
+
+  <meta
+    name="description"
+    content="Portfolio of Himanshu Kumar Singh, Software Developer specializing in Java, Spring Boot, REST APIs, banking applications, and production support."
+  />
+
+  <meta name="author" content="Himanshu Kumar Singh" />
+  <meta name="theme-color" content="#004080" />
+
   <style>
-    *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,'Noto Sans','Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';background:#f5f7fa;color:#1f2937;line-height:1.6}
-    header{background:linear-gradient(135deg,#004080,#0077cc);color:#fff;text-align:center;padding:48px 20px}
-    header img{width:140px;height:140px;border-radius:50%;border:4px solid rgba(255,255,255,.9);margin-bottom:16px;object-fit:cover}
-    header h1{font-size:2rem;margin:6px 0 2px}
-    header p.sub{opacity:.95;font-size:1.05rem}
-    main{max-width:980px;margin:0 auto;padding:20px}
-    section{background:#fff;margin-top:20px;padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.06)}
-    h2{color:#0b4da3;margin:0 0 8px;padding-bottom:8px;border-bottom:2px solid #eef2f7}
-    ul{margin:10px 0 0 22px}
-    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .chip{background:#e6f0ff;color:#0b4da3;padding:6px 10px;border-radius:999px;font-size:.92rem}
-    .contact a{color:#0b68d0;text-decoration:none}
-    .grid{display:grid;grid-template-columns:1fr;gap:16px}
-    @media(min-width:800px){.grid{grid-template-columns:1fr 1fr}}
-    footer{margin-top:28px;background:#0b4da3;color:#fff;text-align:center;padding:16px;font-size:.95rem}
-    .cta{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:10px;background:#0b68d0;color:#fff;text-decoration:none}
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+        Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+      background: #f5f7fa;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #003366, #0077cc);
+      color: #fff;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid rgba(255, 255, 255, 0.9);
+      margin-bottom: 14px;
+      object-fit: cover;
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin: 5px 0;
+    }
+
+    header .subtitle {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 5px 0;
+    }
+
+    header .tagline {
+      max-width: 700px;
+      margin: 12px auto;
+      opacity: 0.95;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      padding: 13px;
+      background: #fff;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    nav a {
+      color: #0755a5;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover,
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      background: #fff;
+      margin-top: 22px;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+      scroll-margin-top: 20px;
+    }
+
+    h2 {
+      color: #0b4da3;
+      margin: 0 0 15px;
+      padding-bottom: 9px;
+      border-bottom: 2px solid #eef2f7;
+    }
+
+    h3 {
+      color: #173b66;
+      margin-bottom: 5px;
+    }
+
+    .muted {
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 760px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .experience-card,
+    .project-card {
+      padding: 18px;
+      border: 1px solid #e5eaf2;
+      border-radius: 10px;
+      background: #fcfdff;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .skills-group {
+      margin-bottom: 20px;
+    }
+
+    .skills-group h3 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .chip {
+      background: #e6f0ff;
+      color: #084b91;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+    }
+
+    .cta {
+      display: inline-block;
+      margin: 8px 5px;
+      padding: 10px 17px;
+      border-radius: 8px;
+      background: #fff;
+      color: #064a8e;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .cta:hover {
+      background: #eaf3ff;
+    }
+
+    .cta-secondary {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .cta-secondary:hover {
+      color: #064a8e;
+    }
+
+    .contact a {
+      color: #0b68d0;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .contact p {
+      margin: 12px 0;
+    }
+
+    footer {
+      margin-top: 30px;
+      background: #083b78;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 35px 16px;
+      }
+
+      main {
+        padding: 12px;
+      }
+
+      section {
+        padding: 18px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <header>
-    <img src="profile.png" alt="Profile Photo">
+    <img src="profile.png" alt="Himanshu Kumar Singh profile photo" />
+
     <h1>Himanshu Kumar Singh</h1>
-    <p class="sub">Java Developer . No-Code / Low-Code Developer . Production Support Specialist · Credit Card Operations · E‑commerce Support</p>
-    <a class="cta" href="#contact">Contact</a>
+
+    <p class="subtitle">
+      Java Developer | Software Engineer
+    </p>
+
+    <p class="tagline">
+      Java Backend Development · Spring Boot · REST API Integration ·
+      Banking Applications · Production Support
+    </p>
+
+    <a class="cta" href="#contact">Contact Me</a>
+    <a
+      class="cta cta-secondary"
+      href="https://github.com/himanshubhadar"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      GitHub Profile
+    </a>
   </header>
 
+  <nav aria-label="Main navigation">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <main>
-    <section>
+
+    <!-- ABOUT -->
+    <section id="about">
       <h2>About Me</h2>
-      <p>I am an IT professional with over 4.10 years of experience in Java developer and Production Support, specializing in credit card operations and e‑commerce platforms. I ensure application stability, rapid incident response, and continuous improvement through root cause analysis and automation.</p>
-    </section>
 
-    <section>
-      <h2>Experience</h2>
-      <div class="grid">
-        <div>
-          <h3>AU Small Finance Bank — Production Support (Credit Card)</h3>
-          <p><em>Jan 2021 – Present</em></p>
-          <ul>
-            <li>Monitored and supported credit card transaction & settlement systems.</li>
-            <li>Drove incident resolution, performed RCA, and implemented preventive actions.</li>
-            <li>Partnered with engineering, vendor, and business teams for fixes & optimizations.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Flipkart — E‑commerce Support(Part time)</h3>
-          <p><em>Jan 2019 – Dec 2020</em></p>
-          <ul>
-            <li>Provided technical & operational support for order processing modules.</li>
-            <li>Reduced platform downtime by rapid triage and escalation management.</li>
-            <li>Collaborated cross‑functionally to resolve production issues.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+      <p>
+        I am a Software Developer at Decimal Technologies Pvt. Ltd.
+        with experience in Java development, low-code/no-code platforms,
+        banking applications, and production support.
+      </p>
 
-    <section>
-      <h2>Skills</h2>
-      <div class="skills">
-	    <span class="chip">Java Developer</span>
-		<span class="chip">Strong Debugging</span>
-		<span class="chip">LowCode/NoCode</span>
-        <span class="chip">Production Support</span>
-        <span class="chip">Incident Management</span>
-        <span class="chip">SQL & Databases</span>
-        <span class="chip">Root Cause Analysis (RCA)</span>
-        <span class="chip">System Monitoring</span>
-        <span class="chip">Escalation Handling</span>
-        <span class="chip">Change Management</span>
-		  
-		
-      </div>
-    </section>
+      <p>
+        I work on banking applications for AU Small Finance Bank,
+        including credit card application development and support.
+        My technical experience includes Java, Spring Boot, REST APIs,
+        SOAP web services, SQL databases, JSON/XML processing,
+        debugging, and application troubleshooting.
+      </p>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p class="contact">
-        📧 Email: <a href="mailto:youremail@example.com">himanshu802126@gmail.com</a><br/>
-        🔗 LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener">https://www.linkedin.com/in/himanshu02r/</a><br/>
-        💻 GitHub: <a href="https://github.com/yourgithub" target="_blank" rel="noopener">https://github.com/himanshubhadar</a>
+      <p>
+        I also work on incident investigation, root cause analysis (RCA),
+        API integration issues, deployment support, and application
+        stability. I enjoy solving technical problems and building
+        reliable backend solutions while continuously improving
+        my software development skills.
       </p>
     </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2>Professional Experience</h2>
+
+      <div class="experience-card">
+        <h3>Decimal Technologies Pvt. Ltd.</h3>
+
+        <p>
+          <strong>Designation:</strong> Software Developer
+        </p>
+
+        <p class="muted">
+          January 2022 – Present |
+          Banking & FinTech Applications
+        </p>
+
+        <h3>Client Project: AU Small Finance Bank</h3>
+
+        <ul>
+          <li>
+            Developed and supported credit card application workflows
+            using Java and low-code/no-code development platforms.
+          </li>
+
+          <li>
+            Worked on backend functionality, REST API integrations,
+            SOAP web services, JSON/XML processing, and database
+            interactions.
+          </li>
+
+          <li>
+            Investigated production incidents, API failures,
+            application defects, and workflow processing issues.
+          </li>
+
+          <li>
+            Performed root cause analysis (RCA), debugging,
+            and log analysis to identify and resolve technical issues.
+          </li>
+
+          <li>
+            Collaborated with development, QA, infrastructure,
+            vendor, and business teams to resolve application issues.
+          </li>
+
+          <li>
+            Supported deployments, release activities, and validation
+            across SIT, UAT, pre-production, and production environments.
+          </li>
+
+          <li>
+            Worked with database procedures, API request/response
+            handling, and third-party service integrations.
+          </li>
+        </ul>
+
+        <p>
+          <strong>Technologies:</strong>
+          Java, Spring Boot, REST APIs, SOAP, SQL, Oracle Database,
+          JSON, XML, Git, Maven, Postman
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
+
+      <div class="skills-group">
+        <h3>Programming & Backend Development</h3>
+        <div class="skills">
+          <span class="chip">Java</span>
+          <span class="chip">Java 8</span>
+          <span class="chip">Spring Boot</span>
+          <span class="chip">REST APIs</span>
+          <span class="chip">SOAP Web Services</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <h3>Database & Data Processing</h3>
+        <div class="skills">
+          <span class="chip">SQL</span>
+          <span class="chip">Oracle Database</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">JSON</span>
+          <span class="chip">XML</span>
+          <span class="chip">Stored Procedures</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <h3>Development Tools</h3>
+        <div class="skills">
+          <span class="chip">Git</span>
+          <span class="chip">GitHub</span>
+          <span class="chip">Maven</span>
+          <span class="chip">Eclipse IDE</span>
+          <span class="chip">Postman</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <h3>Production Support & Operations</h3>
+        <div class="skills">
+          <span class="chip">Debugging</span>
+          <span class="chip">Root Cause Analysis</span>
+          <span class="chip">Incident Management</span>
+          <span class="chip">Log Analysis</span>
+          <span class="chip">Application Monitoring</span>
+          <span class="chip">Escalation Management</span>
+          <span class="chip">Deployment Support</span>
+          <span class="chip">Change Management</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <h3>Platforms & Methodologies</h3>
+        <div class="skills">
+          <span class="chip">Low-Code/No-Code</span>
+          <span class="chip">Vahana</span>
+          <span class="chip">Pega</span>
+          <span class="chip">SIT</span>
+          <span class="chip">UAT</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Featured Project</h2>
+
+      <div class="project-card">
+        <h3>Credit Card Application — Banking Domain</h3>
+
+        <p>
+          Worked on the development and production support of a credit
+          card application for AU Small Finance Bank as part of my role
+          at Decimal Technologies Pvt. Ltd.
+        </p>
+
+        <p><strong>Key Contributions:</strong></p>
+
+        <ul>
+          <li>
+            Backend application development and workflow processing.
+          </li>
+          <li>
+            Integration with REST APIs, SOAP services, and databases.
+          </li>
+          <li>
+            Troubleshooting API failures and application processing issues.
+          </li>
+          <li>
+            Production incident investigation and root cause analysis.
+          </li>
+        </ul>
+
+        <p>
+          <strong>Technologies:</strong>
+          Java, Spring Boot, SQL, REST APIs, SOAP, JSON, XML
+        </p>
+
+        <p class="muted">
+          Project details are limited to publicly shareable,
+          non-confidential information.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+
+      <p>
+        I am interested in opportunities involving Java development,
+        backend engineering, software development, and application support.
+        Feel free to connect with me professionally.
+      </p>
+
+      <div class="contact">
+        <p>
+          Email:
+          <a href="mailto:himanshu802126@gmail.com">
+            himanshu802126@gmail.com
+          </a>
+        </p>
+
+        <p>
+          LinkedIn:
+          <a
+            href="https://www.linkedin.com/in/himanshu02r/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            linkedin.com/in/himanshu02r
+          </a>
+        </p>
+
+        <p>
+          GitHub:
+          <a
+            href="https://github.com/himanshubhadar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github.com/himanshubhadar
+          </a>
+        </p>
+      </div>
+    </section>
+
   </main>
 
   <footer>
-    © 2025 Himanshu Kumar Singh
+    <p>
+      &copy; 2026 Himanshu Kumar Singh. All rights reserved.
+    </p>
   </footer>
+
 </body>
 </html>
